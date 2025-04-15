@@ -19,15 +19,22 @@ public class Franchise
 	/// Описание франшизы.
 	/// </summary>
 	public string Description { get; private set; }
+	
+	/// <summary>
+	/// Возможные вариации названия.
+	/// </summary>
+	public List<string> Names { get; private set; }
 
-	public Franchise(string name, string description)
+	public Franchise(string name, string description, List<string> names)
 	{
 		ArgumentException.ThrowIfNullOrWhiteSpace(name);
 		ArgumentException.ThrowIfNullOrWhiteSpace(description);
+		ArgumentNullException.ThrowIfNull(names);
 		
 		Name = name;
 		Description = description;
 		FranchiseId = Guid.NewGuid();
+		Names = names.Select(n => n.ToLower()).ToList();
 	}
 
 	private Franchise()

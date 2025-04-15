@@ -22,11 +22,6 @@ public class Rating
 	public int Sum { get; private set; } = 0;
 	
 	/// <summary>
-	/// Среднее значение.
-	/// </summary>
-	public double Average => Sum != 0 ? (double)Sum / Count : 0;
-	
-	/// <summary>
 	/// Тест.
 	/// </summary>
 	public Guid TestId { get; private set; }

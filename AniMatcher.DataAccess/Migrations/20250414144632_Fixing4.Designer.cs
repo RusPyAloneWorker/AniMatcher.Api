@@ -3,6 +3,7 @@ using System;
 using AniMatcher.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AniMatcher.DataAccess.Migrations
 {
     [DbContext(typeof(AniMatcherContext))]
-    partial class AniMatcherContextModelSnapshot : ModelSnapshot
+    [Migration("20250414144632_Fixing4")]
+    partial class Fixing4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -3,6 +3,7 @@ using System;
 using AniMatcher.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AniMatcher.DataAccess.Migrations
 {
     [DbContext(typeof(AniMatcherContext))]
-    partial class AniMatcherContextModelSnapshot : ModelSnapshot
+    [Migration("20250414143032_Fixing2")]
+    partial class Fixing2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,64 +51,64 @@ namespace AniMatcher.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            CharacterId = new Guid("e71a7198-1368-4d89-ad9e-94133aaa99b7"),
-                            CopyrightId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            CharacterId = new Guid("4ecf7e23-6f80-44b3-910f-0371137d7d8c"),
+                            CopyrightId = new Guid("4a9848f1-d16b-4b58-a4b9-65c940f10ea8"),
                             Name = "Batman",
                             Names = "[\"бэтмэн\",\"бэтмен\",\"batman\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("936e8189-94a6-4a4f-a195-2f3729ff1614"),
-                            CopyrightId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            CharacterId = new Guid("882c7e94-e03a-4853-afcc-b04905724783"),
+                            CopyrightId = new Guid("4a9848f1-d16b-4b58-a4b9-65c940f10ea8"),
                             Name = "Superman",
                             Names = "[\"superman\",\"супермен\",\"супермэн\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("cef2c22e-01c3-4fc2-8c66-d12afddbba0e"),
-                            CopyrightId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            CharacterId = new Guid("c164d15c-0908-45a8-a5d4-deb1e0855f2b"),
+                            CopyrightId = new Guid("4a9848f1-d16b-4b58-a4b9-65c940f10ea8"),
                             Name = "Flash",
                             Names = "[\"flash\",\"флэш\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("8cee8921-79ad-466c-be99-ec4abb0ca398"),
-                            CopyrightId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            CharacterId = new Guid("b840a79b-39e0-43bd-8dfc-9fa2958d93c0"),
+                            CopyrightId = new Guid("d8dcbabb-649f-40e7-bd41-c505c2d4459b"),
                             Name = "Hulk",
                             Names = "[\"hulk\",\"халк\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("9835eef3-3c94-441d-bd31-e3f984b6d6b4"),
-                            CopyrightId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            CharacterId = new Guid("1f2b3716-93f0-4ca6-9400-271c28e4c174"),
+                            CopyrightId = new Guid("d8dcbabb-649f-40e7-bd41-c505c2d4459b"),
                             Name = "Spider Man",
                             Names = "[\"человек-паук\",\"человек паук\",\"spider-man\",\"spider man\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("ff334248-4210-448a-a065-d8fcc511a3d8"),
-                            CopyrightId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            CharacterId = new Guid("109b9918-a406-4b88-a45a-847377ab29dd"),
+                            CopyrightId = new Guid("d8dcbabb-649f-40e7-bd41-c505c2d4459b"),
                             Name = "Iron Man",
                             Names = "[\"iron man\",\"ironman\",\"железный человек\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("7b5c7b24-ac44-4752-a60a-2c26217f57e4"),
-                            CopyrightId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            CharacterId = new Guid("665acda2-5c2c-404d-a34b-d77e2d5b16aa"),
+                            CopyrightId = new Guid("cd20d03f-d6f5-4696-ae0b-b6d4ca9396ac"),
                             Name = "Naruto",
                             Names = "[\"наруто\",\"naruto\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("0176db48-04b6-4bcc-a94b-18576f97ca16"),
-                            CopyrightId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            CharacterId = new Guid("a872f2e7-90ab-4087-a801-cfb2e18a7907"),
+                            CopyrightId = new Guid("cd20d03f-d6f5-4696-ae0b-b6d4ca9396ac"),
                             Name = "Sasuke",
                             Names = "[\"саске\",\"сасуке\",\"sasuke\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("ea4d1129-25b0-430f-ab8a-f5cde94a5788"),
-                            CopyrightId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            CharacterId = new Guid("479aab0d-3ba3-4236-8ba3-e64ebddbc630"),
+                            CopyrightId = new Guid("cd20d03f-d6f5-4696-ae0b-b6d4ca9396ac"),
                             Name = "Sakura",
                             Names = "[\"sakura\",\"сакура\"]"
                         });
@@ -136,21 +139,21 @@ namespace AniMatcher.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            FranchiseId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            FranchiseId = new Guid("d8dcbabb-649f-40e7-bd41-c505c2d4459b"),
                             Description = "Comic Franchise",
                             Name = "Marvel",
                             Names = "[\"marvel\",\"марвел\"]"
                         },
                         new
                         {
-                            FranchiseId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            FranchiseId = new Guid("4a9848f1-d16b-4b58-a4b9-65c940f10ea8"),
                             Description = "Comic Franchise",
                             Name = "DC",
                             Names = "[\"dc\",\"диси\",\"дс\"]"
                         },
                         new
                         {
-                            FranchiseId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            FranchiseId = new Guid("cd20d03f-d6f5-4696-ae0b-b6d4ca9396ac"),
                             Description = "Manga Franchise",
                             Name = "Naruto",
                             Names = "[\"наруто\",\"naruto\"]"

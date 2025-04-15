@@ -49,18 +49,19 @@ public class Test
 	/// <summary>
 	/// Теги.
 	/// </summary>
-	public List<Tag> Tags { get; private set; } = new List<Tag>();
-
-	/// <summary>
-	/// Франшизы, которые фигурируют в тесте.
-	/// </summary>
-	public List<Franchise> Franchises { get; private set; } = new List<Franchise>();
-
-	public Test(string title, string description, List<Question> questions)
+	public List<Tag>? Tags { get; private set; }
+	
+	public Test(
+		string title, 
+		string description, 
+		List<Question> questions, 
+		List<Character> characters,
+		List<Tag>? tags)
 	{
 		ArgumentNullException.ThrowIfNull(title);
 		ArgumentNullException.ThrowIfNull(questions);
 		ArgumentNullException.ThrowIfNull(description);
+		ArgumentNullException.ThrowIfNull(characters);
 
 		if (questions.Count < MinQuestionCount)
 		{
@@ -78,6 +79,8 @@ public class Test
 		Title = title;
 		Description = description;
 		Questions = questions;
+		Characters = characters;
+		Tags = tags;
 		CreationDate = DateTime.Now;
 		TestId = Guid.NewGuid();
 		Rating = new Rating(TestId);

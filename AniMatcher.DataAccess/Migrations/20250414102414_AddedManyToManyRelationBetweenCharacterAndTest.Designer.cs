@@ -3,6 +3,7 @@ using System;
 using AniMatcher.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AniMatcher.DataAccess.Migrations
 {
     [DbContext(typeof(AniMatcherContext))]
-    partial class AniMatcherContextModelSnapshot : ModelSnapshot
+    [Migration("20250414102414_AddedManyToManyRelationBetweenCharacterAndTest")]
+    partial class AddedManyToManyRelationBetweenCharacterAndTest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,64 +51,64 @@ namespace AniMatcher.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            CharacterId = new Guid("e71a7198-1368-4d89-ad9e-94133aaa99b7"),
-                            CopyrightId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            CharacterId = new Guid("b9ae3d10-ccd3-43d3-b14f-7b6ead55a4da"),
+                            CopyrightId = new Guid("281a8601-0d18-4507-877c-dfe85d2fd0ef"),
                             Name = "Batman",
                             Names = "[\"бэтмэн\",\"бэтмен\",\"batman\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("936e8189-94a6-4a4f-a195-2f3729ff1614"),
-                            CopyrightId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            CharacterId = new Guid("4a3d87c4-1d48-4a45-b61e-24223475584e"),
+                            CopyrightId = new Guid("281a8601-0d18-4507-877c-dfe85d2fd0ef"),
                             Name = "Superman",
                             Names = "[\"superman\",\"супермен\",\"супермэн\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("cef2c22e-01c3-4fc2-8c66-d12afddbba0e"),
-                            CopyrightId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            CharacterId = new Guid("0a5cd913-7c10-42fa-8119-10193f5d7fe8"),
+                            CopyrightId = new Guid("281a8601-0d18-4507-877c-dfe85d2fd0ef"),
                             Name = "Flash",
                             Names = "[\"flash\",\"флэш\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("8cee8921-79ad-466c-be99-ec4abb0ca398"),
-                            CopyrightId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            CharacterId = new Guid("ae7dec5f-5958-4e08-a3de-ca35faaabe22"),
+                            CopyrightId = new Guid("a8f77239-b424-444b-b809-f515aff6b717"),
                             Name = "Hulk",
                             Names = "[\"hulk\",\"халк\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("9835eef3-3c94-441d-bd31-e3f984b6d6b4"),
-                            CopyrightId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            CharacterId = new Guid("e8d571a6-23b5-4672-916a-def52443e18f"),
+                            CopyrightId = new Guid("a8f77239-b424-444b-b809-f515aff6b717"),
                             Name = "Spider Man",
                             Names = "[\"человек-паук\",\"человек паук\",\"spider-man\",\"spider man\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("ff334248-4210-448a-a065-d8fcc511a3d8"),
-                            CopyrightId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            CharacterId = new Guid("da0a27b2-4335-41f9-bfcf-877da7c488cb"),
+                            CopyrightId = new Guid("a8f77239-b424-444b-b809-f515aff6b717"),
                             Name = "Iron Man",
                             Names = "[\"iron man\",\"ironman\",\"железный человек\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("7b5c7b24-ac44-4752-a60a-2c26217f57e4"),
-                            CopyrightId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            CharacterId = new Guid("32b91f9b-fec7-49db-9511-0d8b5964e231"),
+                            CopyrightId = new Guid("e82766fb-6a3e-498f-a167-d15af24c723b"),
                             Name = "Naruto",
                             Names = "[\"наруто\",\"naruto\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("0176db48-04b6-4bcc-a94b-18576f97ca16"),
-                            CopyrightId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            CharacterId = new Guid("53a52954-ea07-4f7b-895c-9edb4ff71fea"),
+                            CopyrightId = new Guid("e82766fb-6a3e-498f-a167-d15af24c723b"),
                             Name = "Sasuke",
                             Names = "[\"саске\",\"сасуке\",\"sasuke\"]"
                         },
                         new
                         {
-                            CharacterId = new Guid("ea4d1129-25b0-430f-ab8a-f5cde94a5788"),
-                            CopyrightId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            CharacterId = new Guid("13787b25-de0d-43ac-aba7-6f1cd5a54bed"),
+                            CopyrightId = new Guid("e82766fb-6a3e-498f-a167-d15af24c723b"),
                             Name = "Sakura",
                             Names = "[\"sakura\",\"сакура\"]"
                         });
@@ -129,28 +132,33 @@ namespace AniMatcher.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("jsonb");
 
+                    b.Property<Guid?>("TestId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("FranchiseId");
+
+                    b.HasIndex("TestId");
 
                     b.ToTable("Franchises");
 
                     b.HasData(
                         new
                         {
-                            FranchiseId = new Guid("85ae4d0b-51af-4b65-9f60-3fce549f64c1"),
+                            FranchiseId = new Guid("a8f77239-b424-444b-b809-f515aff6b717"),
                             Description = "Comic Franchise",
                             Name = "Marvel",
                             Names = "[\"marvel\",\"марвел\"]"
                         },
                         new
                         {
-                            FranchiseId = new Guid("cf45d0e0-8db9-4772-afc5-ad03f667ac43"),
+                            FranchiseId = new Guid("281a8601-0d18-4507-877c-dfe85d2fd0ef"),
                             Description = "Comic Franchise",
                             Name = "DC",
                             Names = "[\"dc\",\"диси\",\"дс\"]"
                         },
                         new
                         {
-                            FranchiseId = new Guid("638366e4-0701-4872-a9b3-94c95494b54a"),
+                            FranchiseId = new Guid("e82766fb-6a3e-498f-a167-d15af24c723b"),
                             Description = "Manga Franchise",
                             Name = "Naruto",
                             Names = "[\"наруто\",\"naruto\"]"
@@ -233,10 +241,12 @@ namespace AniMatcher.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("TestId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("TagId");
 
-                    b.HasIndex("TagName")
-                        .IsUnique();
+                    b.HasIndex("TestId");
 
                     b.ToTable("Tags");
                 });
@@ -248,7 +258,7 @@ namespace AniMatcher.DataAccess.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreationDate")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -278,21 +288,6 @@ namespace AniMatcher.DataAccess.Migrations
                     b.ToTable("CharacterTest");
                 });
 
-            modelBuilder.Entity("TagTest", b =>
-                {
-                    b.Property<Guid>("TagsTagId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("TestId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("TagsTagId", "TestId");
-
-                    b.HasIndex("TestId");
-
-                    b.ToTable("TagTest");
-                });
-
             modelBuilder.Entity("AniMatcher.Domain.Character", b =>
                 {
                     b.HasOne("AniMatcher.Domain.Franchise", "Copyright")
@@ -302,6 +297,13 @@ namespace AniMatcher.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Copyright");
+                });
+
+            modelBuilder.Entity("AniMatcher.Domain.Franchise", b =>
+                {
+                    b.HasOne("AniMatcher.Domain.Test", null)
+                        .WithMany("Franchises")
+                        .HasForeignKey("TestId");
                 });
 
             modelBuilder.Entity("AniMatcher.Domain.Question", b =>
@@ -329,26 +331,18 @@ namespace AniMatcher.DataAccess.Migrations
                     b.Navigation("Test");
                 });
 
+            modelBuilder.Entity("AniMatcher.Domain.Tag", b =>
+                {
+                    b.HasOne("AniMatcher.Domain.Test", null)
+                        .WithMany("Tags")
+                        .HasForeignKey("TestId");
+                });
+
             modelBuilder.Entity("CharacterTest", b =>
                 {
                     b.HasOne("AniMatcher.Domain.Character", null)
                         .WithMany()
                         .HasForeignKey("CharactersCharacterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AniMatcher.Domain.Test", null)
-                        .WithMany()
-                        .HasForeignKey("TestId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TagTest", b =>
-                {
-                    b.HasOne("AniMatcher.Domain.Tag", null)
-                        .WithMany()
-                        .HasForeignKey("TagsTagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -366,10 +360,14 @@ namespace AniMatcher.DataAccess.Migrations
 
             modelBuilder.Entity("AniMatcher.Domain.Test", b =>
                 {
+                    b.Navigation("Franchises");
+
                     b.Navigation("Questions");
 
                     b.Navigation("Rating")
                         .IsRequired();
+
+                    b.Navigation("Tags");
                 });
 #pragma warning restore 612, 618
         }

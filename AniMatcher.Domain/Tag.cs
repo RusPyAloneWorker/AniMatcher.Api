@@ -13,13 +13,18 @@ public class Tag
 		TagId = Guid.NewGuid();
 	}
 
+	public Tag(Guid id)
+	{
+		TagId = id;
+	}
+	
 	/// <summary>
 	/// Идентификатор.
 	/// </summary>
-	public Guid TagId { get; set; }
+	public Guid TagId { get; private init; }
 	
 	/// <summary>
 	/// Название.
 	/// </summary>
-	public string TagName { get; set; }
+	public string TagName { get; private init; }
 }

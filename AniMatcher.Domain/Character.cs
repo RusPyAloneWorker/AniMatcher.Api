@@ -28,9 +28,15 @@ public class Character
 	/// </summary>
 	public Guid CopyrightId { get; private init; }
 	
-	public Character(string name, Guid copyrightId)
+	/// <summary>
+	/// Возможные вариации названия.
+	/// </summary>
+	public List<string> Names { get; private set; }
+	
+	public Character(string name, Guid copyrightId, List<string> names)
 	{
 		ArgumentException.ThrowIfNullOrWhiteSpace(name);
+		ArgumentNullException.ThrowIfNull(names);
 		
 		if (Guid.Empty.Equals(copyrightId))
 		{
@@ -38,8 +44,14 @@ public class Character
 		}
 		
 		Name = name;
+		Names = names.Select(n => n.ToLower()).ToList();
 		CopyrightId = copyrightId;
 		CharacterId = Guid.NewGuid();
+	}
+
+	public Character(Guid Id)
+	{
+		CharacterId = Id;
 	}
 
 	private Character()
