@@ -124,7 +124,7 @@ public static class GetEndpointsExtension
 					.ToListAsync();
 
 				tests = tests
-					.Where(x => tags.All(t => x.Tags!.Select(t1 => t1.TagName).Contains(t)))
+					.Where(x => tags.All(t => x.Tags!.Select(t1 => t1.TagName.ToLower()).Contains(t.ToLower())))
 					.ToList();
 				
 				return tests.Any()
