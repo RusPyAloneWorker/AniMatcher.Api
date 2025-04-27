@@ -35,8 +35,6 @@ app.UseSwaggerUI();
 app.AddGetEndpoints();
 app.AddPostEndpoints();
 
-app.UseHttpsRedirection();
-
 app.Run();
 
 async Task AddTests(AniMatcherContext db)

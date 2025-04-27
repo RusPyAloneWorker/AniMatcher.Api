@@ -8,10 +8,12 @@ services:
       context: .
       dockerfile: AniMatcher.Api/Dockerfile
     environment:
-      - ASPNETCORE_HTTP_PORTS=80
+      - ASPNETCORE_URLS=http://+:81;http://+:443
+      - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__PostgresConnection=Host=postgres_db;Port=5432;Database=animatcherdb;Username=postgres;Password=password@123
     ports:
-      - "8000:80"
+      - "8000:81"
+      - "8001:443"
     depends_on:
       - postgres
 
